@@ -1,0 +1,28 @@
+Hard 2 
+You are given a string s. You can convert s to a 
+palindrome by adding characters in front of it.
+Return the shortest palindrome you can find by performing this transformation.
+Program:
+def shortest_palindrome(s):
+    if not s:
+        return ""
+
+    # Find the longest palindrome prefix
+    i = 0
+    for j in range(len(s) - 1, -1, -1):
+        if s[i] == s[j]:
+            i += 1
+
+    # If the entire string is a palindrome, return the original string
+    if i == len(s):
+        return s
+
+    # Append the reverse of the remaining part to the front
+    return s[i:][::-1] + s
+
+# Test cases
+s1 = "aacecaaa"
+print(shortest_palindrome(s1))  # Output: "aaacecaaa"
+
+s2 = "abcd"
+print(shortest_palindrome(s2))  # Output: "dcbabcd"
