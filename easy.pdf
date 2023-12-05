@@ -3,23 +3,23 @@ Given a string s consisting of words and spaces, return the length of the last w
 A word is a maximal 
 substring consisting of non-space characters only.
 Program:
-def length_of_last_word(s):
+def length_last_word(s):
     # Remove leading and trailing spaces
     s = s.strip()
 
     # Find the last space in the modified string
-    last_space_index = s.rfind(' ')
+    last_space= s.rfind(' ')
 
     # If there is no space, the entire string is the last word
-    if last_space_index == -1:
+    if last_space == -1:
         return len(s)
 
     # Return the length of the last word
-    return len(s[last_space_index + 1:])
+    return len(s[last_space + 1:])
 
 # Test cases
-print(length_of_last_word("Hello World"))  # Output: 5
-print(length_of_last_word("   fly me   to   the moon  "))  # Output: 4
-print(length_of_last_word("luffy is still joyboy"))  # Output: 6
+print(length_last_word("Hello World"))  # Output: 5
+print(length_last_word(" fly me   to   the moon  "))  # Output: 4
+print(length_last_word("luffy is still joyboy"))  # Output: 6
 
  
