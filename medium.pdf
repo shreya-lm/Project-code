@@ -36,11 +36,11 @@ def majority_element(nums):
 
 # Test cases
 nums1 = [3, 2, 3]
-print(majority_element(nums1))  # Output: [3]
+print(majority_element(nums1))  # Output: 3
 
 nums2 = [1]
-print(majority_element(nums2))  # Output: [1]
+print(majority_element(nums2))  # Output: 1
 
 nums3 = [1, 2]
-print(majority_element(nums3))  # Output: [1, 2]
+print(majority_element(nums3))  # Output: 1,2
 
