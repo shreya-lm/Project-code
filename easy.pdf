@@ -4,13 +4,13 @@ A word is a maximal
 substring consisting of non-space characters only.
 Program:
 def length_last_word(s):
-    # Remove leading and trailing spaces
+    # Remove leading and the trailing spaces
     s = s.strip()
 
-    # Find the last space in the modified string
+    # Find the last space in the string modified
     last_space= s.rfind(' ')
 
-    # If there is no space, the entire string is the last word
+    # If there is no space, the entire string will be last word
     if last_space == -1:
         return len(s)
 
