@@ -13,11 +13,11 @@ def shortest_palindrome(s):
         if s[i] == s[j]:
             i += 1
 
-    # If the entire string is a palindrome, return the original string
+    # If the entire string is a palindrome, return to the original string
     if i == len(s):
         return s
 
-    # Append the reverse of the remaining part to the front
+    # Append the reverse of the remaining part to front
     return s[i:][::-1] + s
 
 # Test cases
